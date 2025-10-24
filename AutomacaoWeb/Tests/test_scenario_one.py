@@ -25,7 +25,7 @@ def test_scenario_one(driver, load_data):
     
     email_page = login_page.navigate_email()
     
-    time.sleep(2)
+    time.sleep(5)
     email_page.click_refresh()
     
     code = email_page.get_code()
@@ -33,8 +33,8 @@ def test_scenario_one(driver, load_data):
     login_page = email_page.navigate_ame()
     
     menu_page = login_page.send_code(code)
-    time.sleep(3)
-
+    
+    time.sleep(1)
     assert menu_page.validate_menu_is_shown()
     
     time.sleep(1)
@@ -44,6 +44,7 @@ def test_scenario_one(driver, load_data):
     
     profile_page = menu_page.click_header_email()
     
+    time.sleep(0.5)
     profile_page.click_auth()
     
     time.sleep(1)
@@ -62,30 +63,28 @@ def test_scenario_one(driver, load_data):
     profile_page.send_code(new_code)
 
     profile_page.send_password(load_data["password_less_than_8"])
-    assert profile_page.validate_save_password_button()
+    assert not profile_page.validate_save_password_button()
     
-    profile_page.clear_password_field()
     time.sleep(1)
+    profile_page.clear_password_field()
     profile_page.send_password(load_data["password_without_numbers"])
-    assert profile_page.validate_save_password_button()
+    assert not profile_page.validate_save_password_button()
     
-    profile_page.clear_password_field()
     time.sleep(1)
+    profile_page.clear_password_field()
     profile_page.send_password(load_data["password_without_lowercase"])
-    assert profile_page.validate_save_password_button()
+    assert not profile_page.validate_save_password_button()
     
-    profile_page.clear_password_field()
     time.sleep(1)
+    profile_page.clear_password_field()
     profile_page.send_password(load_data["password_without_uppercase"])
-    assert profile_page.validate_save_password_button()
+    assert not profile_page.validate_save_password_button()
     
-    profile_page.clear_password_field()
     time.sleep(1)
+    profile_page.clear_password_field()
     profile_page.send_password(load_data["correct_password"])
     assert profile_page.validate_save_password_button()
     
-    time.sleep(5)
+    time.sleep(1)
     profile_page.click_save_password()
     assert profile_page.validate_mask_password_is_shown_and_expected()
-    
-    time.sleep(20)
