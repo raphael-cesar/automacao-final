@@ -12,8 +12,9 @@ class MenuPage(BasePage):
         self.MENU_BANNER_ID = "close-button-1454703513200"
         self.LOGIN_BUTTON_CLASS = "ButtonLogin_Container__sgzuk"
         self.EMAIL_HEADER_XPATH = "/html/body/div[1]/header/div/section[1]/div/a[2]/div[2]"
-
-        
+        self.SEARCH_BAR_ID = "search-input"
+        self.MAG_BUTTON_XPATH = "/html/body/div[1]/header/div/section[1]/div/div[1]/div/form/button"
+     
     def navigate(self):
         return self.driver.get(self.URL_AME)
     
@@ -30,7 +31,11 @@ class MenuPage(BasePage):
     def get_header_email(self):
         return (self.get_element_text(By.XPATH, self.EMAIL_HEADER_XPATH)).replace("olá, ", "").replace("minha conta", "").strip()
     
-    #Actions
+    #Senders
+    def search_product(self, text):
+        self.send_keys_to_element(By.ID, self.SEARCH_BAR_ID, text)
+    
+    #Buttons & Clicks 
     def check_popup(self):
         return self.is_element_displayed(By.ID, self.MENU_BANNER_ID)
     
@@ -45,7 +50,15 @@ class MenuPage(BasePage):
         self.click_element(By.XPATH, self.EMAIL_HEADER_XPATH)
         return ProfilePage(self.driver)
     
+    def click_login(self):
+        from Pages.login_page import LoginPage
+        self.click_element(By.XPATH, self.EMAIL_HEADER_XPATH)
+        return LoginPage(self.driver)
     
+    def search(self):
+        from Pages.search_page import SearchPage
+        self.click_element(By.XPATH, self.MAG_BUTTON_XPATH)
+        return SearchPage(self.driver)
     
     #Validations
     def validate_menu_is_shown(self):

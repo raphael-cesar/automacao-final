@@ -11,7 +11,15 @@ class BasePage:
         
     def click_element(self, by, locator):
         self.find_element(by, locator).click()
-
+        
+    def click_command(self, by, locator):
+        el = self.find_element(by, locator)
+        self.driver.execute_script("arguments[0].click();", el)
+        return el
+    
+    def scroll_web(self,object):
+        self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", object)
+    
     def send_keys_to_element(self, by, locator, text):
         self.find_element(by, locator).send_keys(text)
 
