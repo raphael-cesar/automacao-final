@@ -15,7 +15,7 @@ def driver():
 @pytest.fixture(scope="session")
 def load_data():
     """Lê o JSON de capabilities e retorna como dicionário"""
-    json_path = Path(__file__).resolve().parent / "Data" / "passwords.json"
+    json_path = Path(__file__).resolve().parent / "Data" / "my_data.json"
     with open(json_path, "r", encoding="utf-8") as f:
         data = json.load(f)
     return data

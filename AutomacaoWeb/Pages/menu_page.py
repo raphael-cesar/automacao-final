@@ -12,8 +12,8 @@ class MenuPage(BasePage):
         self.MENU_BANNER_ID = "close-button-1454703513200"
         self.LOGIN_BUTTON_CLASS = "ButtonLogin_Container__sgzuk"
         self.EMAIL_HEADER_XPATH = "/html/body/div[1]/header/div/section[1]/div/a[2]/div[2]"
-
-        
+        self.SEARCH_BAR_ID = "search-input"
+     
     def navigate(self):
         return self.driver.get(self.URL_AME)
     
@@ -45,7 +45,10 @@ class MenuPage(BasePage):
         self.click_element(By.XPATH, self.EMAIL_HEADER_XPATH)
         return ProfilePage(self.driver)
     
-    
+    def click_login(self):
+        from Pages.login_page import LoginPage
+        self.click_element(By.XPATH, self.EMAIL_HEADER_XPATH)
+        return LoginPage(self.driver)
     
     #Validations
     def validate_menu_is_shown(self):
