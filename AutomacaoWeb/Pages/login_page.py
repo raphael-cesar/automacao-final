@@ -15,8 +15,19 @@ class LoginPage(BasePage):
         self.EMAIL_PASSWORD_LOGIN_XPATH = "/html/body/div[2]/div/div[1]/div/div[2]/div/div/div/section/div/div[2]/div/div[1]/div[1]/ul/li[1]/div/button"
         self.PASSWORD_INPUT_XPATH = "/html/body/div[2]/div/div[1]/div/div[2]/div/div/div/section/div/div[2]/div/div[2]/div/div/form/div[2]/div/label/div/input"
         self.LOGIN_BUTTON_CSS = ".vtex-login-2-x-formFooter"
-        
-    #Get
+        self.PASSWORD_ERROR_CLASS = "vtex-login-2-x-formError"
+    
+    def navigate_email(self):
+        from Pages.email_page import EmailPage
+        handles = self.driver.window_handles
+        self.driver.switch_to.window(handles[1])
+        return EmailPage(self.driver)
+    
+    #Getters
+    def get_password_error(self):
+        return self.get_element_text(By.CLASS_NAME, self.PASSWORD_ERROR_CLASS)
+      
+    #Senders
     def send_email(self, text):
         self.send_keys_to_element(By.XPATH, self.EMAIL_INPUT_XPATH, text)
         
@@ -25,13 +36,8 @@ class LoginPage(BasePage):
         
     def send_password(self, text):
         self.send_keys_to_element(By.XPATH, self.PASSWORD_INPUT_XPATH, text)
-        
-    def navigate_email(self):
-        from Pages.email_page import EmailPage
-        handles = self.driver.window_handles
-        self.driver.switch_to.window(handles[1])
-        return EmailPage(self.driver)
-        
+     
+    #Buttons & Clicks   
     def button_login_code(self):
         self.click_command(By.CLASS_NAME, self.SEND_EMAIL_BUTTON_CLASS)
         
@@ -47,5 +53,9 @@ class LoginPage(BasePage):
     
     def click_login_email_password(self):
         self.click_command(By.XPATH, self.EMAIL_PASSWORD_LOGIN_XPATH)
+        
+    #Validations
+    def validate_password_error_is_shown(self):
+        return self.get_password_error() == "Usuário e/ou senha incorretos"
     
     

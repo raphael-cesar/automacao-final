@@ -1,0 +1,26 @@
+[
+    {
+      "Product": "Apple iPhone 17 Pro Max 256GB Laranja-cósmico",
+      "Price": "13498,80",
+      "Zipcode": "50710330",
+      "delivery_estimate": "7 dias uteis",
+      "shipping_fee": "Gratis",
+      "purchased": false
+    },
+    {
+      "Product": "Apple Watch se gps Caixa prateada de alumínio – 44 mm Pulseira esportiva denim – p/m",
+      "Price": "3.529,00",
+      "Zipcode": "50710330",
+      "delivery_estimate": "7 dias uteis",
+      "shipping_fee": "Gratis",
+      "purchased": false
+    },
+    {
+      "Product": "Apple MacBook Air 13, M3, cpu de 8 núcleos, gpu de 8 núcleos, 24GB ram, 512GB ssd - Meia-noite",
+      "Price": "18.589,00",
+      "Zipcode": "50710330",
+      "delivery_estimate": "7 dias uteis",
+      "shipping_fee": "Gratis",
+      "purchased": false
+    }
+]
