@@ -4,7 +4,7 @@ from selenium.webdriver.support import expected_conditions as EC
 class BasePage:
     def __init__(self, driver):
         self.driver = driver
-        self.wait = WebDriverWait(driver, 10)
+        self.wait = WebDriverWait(driver, 15)
 
     def find_element(self, by, locator):
         return self.wait.until(EC.presence_of_element_located((by, locator)))
@@ -37,13 +37,3 @@ class BasePage:
             return self.find_element(by, locator).is_enabled()
         except:
             return False
-        
-    def scroll(self, direction):
-        self.driver.execute_script("mobile: scrollGesture", {
-        "left": 0,
-        "top": self.screen_height * 0.3,
-        "width": self.screen_width,
-        "height": self.screen_height * 0.5,
-        "direction": f"{direction}",
-        "percent": 1.0
-    })

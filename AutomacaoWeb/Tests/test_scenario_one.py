@@ -113,3 +113,4 @@ def test_scenario_one(driver, load_data):
     
     # 14. Validate success: Validate that the password was saved successfully (just validate that the sequence of asterisks appeared on the screen).
     assert profile_page.validate_mask_password_is_shown_and_expected()
+    assert profile_page.validate_comma_is_shown()

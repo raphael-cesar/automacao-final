@@ -4,24 +4,19 @@ from selenium.webdriver.support import expected_conditions as EC
 class BasePage:
     def __init__(self, driver):
         self.driver = driver
-        self.wait = WebDriverWait(driver, 10)
+        self.wait = WebDriverWait(driver, 15)
 
     def find_element(self, by, locator):
         return self.wait.until(EC.presence_of_element_located((by, locator)))
+    
+    def wait_for_element_to_be_clickable(self, by, locator):
+        return self.wait.until(EC.element_to_be_clickable((by, locator)))
         
     def click_element(self, by, locator):
-        self.find_element(by, locator).click()
+        self.wait_for_element_to_be_clickable(by, locator).click()
         
-    def click_command(self, by, locator):
-        el = self.find_element(by, locator)
-        self.driver.execute_script("arguments[0].click();", el)
-        return el
-    
-    def scroll_web(self,object):
-        self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", object)
-    
     def send_keys_to_element(self, by, locator, text):
-        self.find_element(by, locator).send_keys(text)
+        self.wait_for_element_to_be_clickable(by, locator).send_keys(text)
 
     def get_element_text(self, by, locator):
         return self.find_element(by, locator).text

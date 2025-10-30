@@ -16,7 +16,10 @@ def driver():
         "appium:ensureWebviewsHavePages": True,
         "appium:nativeWebScreenshot": True,
         "appium:newCommandTimeout": 3600,
-        "appium:connectHardwareKeyboard": True,   
+        "appium:connectHardwareKeyboard": True,  
+        "appium:appWaitActivity": "com.b2w.americanas.MainActivity",
+        "appium:autoGrantPermissions": True, 
+        "appium: appWaitDuration": 5000,
     }) # Capabilities defined here
     _driver = webdriver.Remote("http://127.0.0.1:4723", options=options)
     
@@ -27,7 +30,7 @@ def driver():
     # This code runs AFTER the test function completes (or fails)
     
     print("\nQuitting driver...")
-    _driver.quit()
+    # _driver.quit()
 
 @pytest.fixture(scope="session")
 def load_data_mobile():
