@@ -1,15 +1,17 @@
 from Pages.home_page import HomePage
 import pytest
-import time
 
 @pytest.mark.usefixtures("load_data_mobile")
 def test_scenario_six(driver, load_data_mobile):
     home_page = HomePage(driver)
     data = load_data_mobile
+    
     # 1. Access the website: Open the browser and go to the Americanas website.
+    if home_page.check_popup():
+        home_page.close_popup()
+        
     # 2. Navigate to Login: Click on the "Login or Sign Up" option.
     profile_page = home_page.click_profile()
-
     profile_page.click_login_email()
     login_page = profile_page.click_login_with_password()
     

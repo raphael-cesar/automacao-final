@@ -1,6 +1,5 @@
 from Pages.base_page import BasePage
 from appium.webdriver.common.appiumby import AppiumBy
-import time
 
 class LoginPage(BasePage):
     def __init__(self, driver):
@@ -19,8 +18,7 @@ class LoginPage(BasePage):
     def send_password(self, data):
         self.click_element(AppiumBy.XPATH, self.PASSWORD_FIELD_XPATH)
         self.send_keys_to_element(AppiumBy.XPATH, self.PASSWORD_FIELD_XPATH, data)
-        time.sleep(0.5)
-     
+
     # Buttons & Clicks
     def login_button(self):
         from Pages.home_page import HomePage

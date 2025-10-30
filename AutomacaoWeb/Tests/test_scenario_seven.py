@@ -1,6 +1,5 @@
 from Pages.menu_page import MenuPage
 import pytest
-import time
 
 @pytest.mark.usefixtures("load_data")
 def test_scenario_seven(driver, load_data):

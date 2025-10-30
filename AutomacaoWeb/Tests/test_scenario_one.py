@@ -20,7 +20,9 @@ def test_scenario_one(driver, load_data):
     # 3. Generate Temporary Email: In a new tab, go to https://temp-mail.io/ and copy the generated email.
     email_page = menu_page.navigate_email()
     
+    time.sleep(5)
     email_page.get_email()
+    time.sleep(1)
     
     login_page = email_page.navigate_ame()
     

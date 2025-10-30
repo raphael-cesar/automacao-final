@@ -1,6 +1,5 @@
 from Pages.base_page import BasePage
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 
 
 # from Pages.email_page import EmailPage
@@ -57,5 +56,3 @@ class LoginPage(BasePage):
     #Validations
     def validate_password_error_is_shown(self):
         return self.get_password_error() == "Usuário e/ou senha incorretos"
-    
-    

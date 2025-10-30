@@ -2,8 +2,6 @@ from Pages.base_page import BasePage
 from Pages.login_page import LoginPage
 from selenium.webdriver.common.by import By
 
-import time
-
 class EmailPage(BasePage):
     def __init__(self, driver):
         super().__init__(driver)
@@ -15,9 +13,7 @@ class EmailPage(BasePage):
         self.CODE_2_TEXT_PATH = "/html/body/div[1]/main/div[6]/aside/div/div[2]/div/ul/li[1]/div[2]/span[1]"
     #Get
     def get_email(self):
-        time.sleep(5)
         self.click_element(By.XPATH, self.EMAIL_XPATH)
-        time.sleep(1)
         
     def get_code(self):
         return (self.get_element_text(By.XPATH, self.CODE_TEXT_XPATH)).replace("Seu código de acesso é ", "").strip()

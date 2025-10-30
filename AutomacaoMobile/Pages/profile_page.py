@@ -1,6 +1,5 @@
 from Pages.base_page import BasePage
 from appium.webdriver.common.appiumby import AppiumBy
-import time
 
 class ProfilePage(BasePage):
     def __init__(self, driver):

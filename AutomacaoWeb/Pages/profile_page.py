@@ -2,8 +2,6 @@ from Pages.base_page import BasePage
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
-import time
-
 class ProfilePage(BasePage):
     def __init__(self, driver):
         super().__init__(driver)
