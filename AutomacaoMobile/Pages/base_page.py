@@ -16,10 +16,13 @@ class BasePage:
         self.wait_for_element_to_be_clickable(by, locator).click()
         
     def send_keys_to_element(self, by, locator, text):
-        self.wait_for_element_to_be_clickable(by, locator).send_keys(text)
+        self.find_element(by, locator).send_keys(text)
 
     def get_element_text(self, by, locator):
         return self.find_element(by, locator).text
+    
+    def get_element_attribute(self, by, locator, attribute):
+        return self.find_element(by, locator).get_attribute(attribute)
     
     def is_element_displayed(self, by, locator):
         try:
@@ -42,3 +45,9 @@ class BasePage:
         "direction": f"{direction}",
         "percent": 1.0
     })
+        
+    def enter_button(self):
+        """
+            This argument specifies which action button to press.In this case, search
+        """
+        self.driver.execute_script("mobile: performEditorAction", {"action": "search"})

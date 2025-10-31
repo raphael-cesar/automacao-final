@@ -1,7 +1,7 @@
 from Tests_API.get import get_wishlist
 from Pages.menu_page import MenuPage
 
-def test_scenario_three(driver):
+def test_scenario_five(driver):
     data = get_wishlist()
     menu_page = MenuPage(driver)
     index = 0
@@ -19,10 +19,7 @@ def test_scenario_three(driver):
         
         # 3. Validate Grid View: In the grid view, confirm that the product title and price are correct.
         json_price = data[index]["Price"]
-        if(index == 0 ):
-            actual_price = float(json_price.replace(",", ".").strip())
-        else:
-            actual_price = float(json_price.replace(".", "").replace(",", ".").strip())
+        actual_price = float(json_price.replace(".", "").replace(",", ".").strip())        
             
         assert search_page.validate_product_name_is_shown_and_expected(data[index]["Product"])
         assert search_page.validate_product_price_is_shown_and_expected(actual_price),f"JSON Price:{json_price} & AME Price:{search_page.get_product_price()}"
