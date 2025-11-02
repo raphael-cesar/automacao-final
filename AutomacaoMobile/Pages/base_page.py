@@ -5,6 +5,9 @@ class BasePage:
     def __init__(self, driver):
         self.driver = driver
         self.wait = WebDriverWait(driver, 15)
+        self.size = driver.get_window_size()
+        self.screen_width = self.size['width']
+        self.screen_height = self.size['height']
 
     def find_element(self, by, locator):
         return self.wait.until(EC.presence_of_element_located((by, locator)))

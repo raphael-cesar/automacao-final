@@ -35,6 +35,13 @@ class HomePage(BasePage):
         self.enter_button()
         return SearchPage(self.driver)
     
+    def search_product_teste(self, data):
+        from Pages.teste_pages import TestePage
+        self.click_element(AppiumBy.XPATH, self.SEARCH_BAR_XPATH)
+        self.send_keys_to_element(AppiumBy.XPATH, self.SEARCH_XPATH, data)
+        self.enter_button()
+        return TestePage(self.driver)
+    
     def close_popup(self):
         self.click_element(AppiumBy.ID, self.CLOSE_BANNER_AD_ID)
     
