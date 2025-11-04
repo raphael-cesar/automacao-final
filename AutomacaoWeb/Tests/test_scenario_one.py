@@ -20,7 +20,9 @@ def test_scenario_one(driver, load_data):
     # 3. Generate Temporary Email: In a new tab, go to https://temp-mail.io/ and copy the generated email.
     email_page = menu_page.navigate_email()
     
+    time.sleep(5)
     email_page.get_email()
+    time.sleep(1)
     
     login_page = email_page.navigate_ame()
     
@@ -113,3 +115,4 @@ def test_scenario_one(driver, load_data):
     
     # 14. Validate success: Validate that the password was saved successfully (just validate that the sequence of asterisks appeared on the screen).
     assert profile_page.validate_mask_password_is_shown_and_expected()
+    assert profile_page.validate_comma_is_shown()
