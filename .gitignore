@@ -1,1 +1,15 @@
-.pytest_cache
+allure-results/
+report.html
+__pychache__/
+screenshots_web/
+assets/
+
+htmlcov/
+.pytest_cache/
+
+*.pyc
+*.pyo
+*.pyd
+*.png
+*.coverage
+*.DS_Store

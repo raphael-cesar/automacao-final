@@ -12,7 +12,7 @@ class SearchPage(BasePage):
      
     def get_product_name(self, product):
         xpath = self.product_name(product)
-        prod = self.get_element_attribute(AppiumBy.XPATH, xpath, "contentDescription")
+        prod = self.get_element_attribute(AppiumBy.XPATH, xpath)
         if "%" in prod:
             prod = prod.split('\n')[1]
             return prod
@@ -22,7 +22,7 @@ class SearchPage(BasePage):
     
     def get_product_price(self, product):
         xpath = self.product_name(product)
-        price = self.get_element_attribute(AppiumBy.XPATH, xpath, "contentDescription")
+        price = self.get_element_attribute(AppiumBy.XPATH, xpath)
         if "%" in price:
             price = price.split('\n')[3]
             price = float(price.replace("R$", "").replace(".", "").replace(",", ".").replace(" ", "").strip())

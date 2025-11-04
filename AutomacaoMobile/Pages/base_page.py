@@ -24,8 +24,8 @@ class BasePage:
     def get_element_text(self, by, locator):
         return self.find_element(by, locator).text
     
-    def get_element_attribute(self, by, locator, attribute):
-        return self.find_element(by, locator).get_attribute(attribute)
+    def get_element_attribute(self, by, locator):
+        return self.find_element(by, locator).get_attribute("contentDescription")
     
     def is_element_displayed(self, by, locator):
         try:
@@ -46,8 +46,11 @@ class BasePage:
         "width": self.screen_width,
         "height": self.screen_height * 0.5,
         "direction": f"{direction}",
-        "percent": 1.0
+        "percent": 0.7
     })
+        
+    def remove_focus(self):
+        self.driver.tap([(100, 100)])
         
     def enter_button(self):
         """
