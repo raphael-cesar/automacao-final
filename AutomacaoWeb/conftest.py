@@ -24,7 +24,7 @@ def load_data():
     return data
 
 # TIME STAMP 
-LOG_FILE = Path("test_durations_web.log")
+LOG_FILE = Path("test_stamps_web.log")
 
 @pytest.hookimpl(tryfirst=True)
 def pytest_runtest_setup(item):

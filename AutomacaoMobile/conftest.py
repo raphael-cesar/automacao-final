@@ -42,7 +42,7 @@ def load_data_mobile():
     return data
 
 # TIME STAMP 
-LOG_FILE = Path("test_durations_mobile.log")
+LOG_FILE = Path("test_stamps_mobile.log")
 
 @pytest.hookimpl(tryfirst=True)
 def pytest_runtest_setup(item):
