@@ -1,6 +1,6 @@
 from Pages.base_page import BasePage
 from selenium.webdriver.common.by import By
-from Pages.email_page import EmailPage
+
 
 class MenuPage(BasePage):
     def __init__(self, driver):
@@ -22,6 +22,7 @@ class MenuPage(BasePage):
         self.driver.execute_script("window.open('https://temp-mail.io/');")
         handles = self.driver.window_handles
         self.driver.switch_to.window(handles[1])
+        from Pages.email_page import EmailPage
         return EmailPage(self.driver)
     
     #Getters

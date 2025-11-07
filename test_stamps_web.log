@@ -1,0 +1,19 @@
+
+[START] Test 'AutomacaoWeb/Tests/test_scenario_five.py::test_scenario_five' - 15:21:10
+[END] Test 'AutomacaoWeb/Tests/test_scenario_five.py::test_scenario_five' finished in 36.23 seconds.
+
+[START] Test 'AutomacaoWeb/Tests/test_scenario_one.py::test_scenario_one' - 15:21:46
+[END] Test 'AutomacaoWeb/Tests/test_scenario_one.py::test_scenario_one' finished in 60.90 seconds.
+
+[START] Test 'AutomacaoWeb/Tests/test_scenario_seven.py::test_scenario_seven' - 15:22:47
+[END] Test 'AutomacaoWeb/Tests/test_scenario_seven.py::test_scenario_seven' finished in 25.81 seconds.
+
+[START] Test 'AutomacaoWeb/Tests/test_scenario_six.py::test_scenario_six' - 15:23:13
+[END] Test 'AutomacaoWeb/Tests/test_scenario_six.py::test_scenario_six' finished in 26.94 seconds.
+
+[START] Test 'AutomacaoWeb/Tests/test_scenario_five.py::test_scenario_five' - 15:37:58
+
+[START] Test 'AutomacaoWeb/Tests/test_scenario_one.py::test_scenario_one' - 15:38:14
+
+[START] Test 'AutomacaoWeb/Tests/test_scenario_seven.py::test_scenario_seven' - 17:52:43
+[END] Test 'AutomacaoWeb/Tests/test_scenario_seven.py::test_scenario_seven' finished in 26.39 seconds.
