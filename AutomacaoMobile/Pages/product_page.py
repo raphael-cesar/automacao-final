@@ -1,6 +1,6 @@
 from appium.webdriver.common.appiumby import AppiumBy
 from Pages.base_page import BasePage
-
+from logger import log
 class ProductPage(BasePage):
     def __init__(self, driver):
         super().__init__(driver)
@@ -14,7 +14,7 @@ class ProductPage(BasePage):
         self.CALCULATE_ZIPCODE_BUTTON_ACC_ID = 'Calcular'
         self.ZIPCODE_ALERT_ID = '//android.widget.ImageView[@content-desc="Frete indisponível para o CEP: 00000-000"]'
         
-        self.BUY_BUTTON_XPATH = '//android.view.View[@content-desc="comprar"]'
+        self.BUY_BUTTON_XPATH = 'comprar'
         
         self.ADD_ONE_XPATH = '//android.widget.ImageView[@resource-id="Aumentar quantidade em 1"]'
         
@@ -37,7 +37,8 @@ class ProductPage(BasePage):
         return f"//android.view.View[contains(@content-desc, '{price}')]"
     
     def delivery_path(self, delivery):
-        return f"//android.view.View[contains(@content-desc, '{delivery}')]"
+        return f"//android.view.View[@content-desc='{delivery}']"
+
     
     def search_zipcode(self, data):
         self.click_element(AppiumBy.XPATH, self.ZIPCODE_INPUT_XPATH)
@@ -82,7 +83,7 @@ class ProductPage(BasePage):
         return HomePage(self.driver) 
     
     def buy_button(self):
-        self.click_element(AppiumBy.XPATH, self.BUY_BUTTON_XPATH)
+        self.click_element(AppiumBy.ACCESSIBILITY_ID, self.BUY_BUTTON_XPATH)
         
     def add_one(self):
         self.click_element(AppiumBy.XPATH, self.ADD_ONE_XPATH)
@@ -114,11 +115,11 @@ class ProductPage(BasePage):
     def validate_zipcode_error_alert_is_shown_and_expected(self):
         return "Frete indisponível" in self.get_zipcode_error()
     
-    def validate_delivery_fee_is_shown_and_expected(self, delivery_fee):
-        return delivery_fee in self.get_delivery_fee(delivery_fee)
+    def validate_delivery_fee_is_shown_and_expected(self,delivery, delivery_fee):
+        return delivery_fee in self.get_delivery_fee(delivery)
     
-    def validate_delivery_time_is_shown_and_expected(self, delivery_time):
-        return delivery_time in self.get_delivery_fee(delivery_time)
+    def validate_delivery_time_is_shown_and_expected(self,delivery, delivery_time):
+        return delivery_time in self.get_delivery_fee(delivery)
     
     def validate_remove_one_button_is_disable(self):
         return self.is_element_enabled(AppiumBy.XPATH, self.REMOVE_ONE_XPATH)

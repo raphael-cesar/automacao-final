@@ -49,7 +49,7 @@ def test_scenario_one(driver, load_data):
     menu_page = login_page.click_send_code()
     
     # 7. Verify Redirect: Confirm that you have been redirected to the homepage.
-    time.sleep(4) #Transition delay
+    time.sleep(5) #Transition delay
     assert menu_page.validate_menu_is_shown()
     
     # 8. Validate Login: Check if the new user's email is displayed in the page header.
@@ -61,7 +61,7 @@ def test_scenario_one(driver, load_data):
     # 9. Access My Account: Open the "My Account" menu and confirm that the email in the registration tab is correct.
     profile_page = menu_page.click_header_email()
     
-    time.sleep(1.3)
+    time.sleep(2)
     profile_page.click_auth()
     
     # 10. Start Password Setup: Navigate to the authentication section and select "Set Password".
