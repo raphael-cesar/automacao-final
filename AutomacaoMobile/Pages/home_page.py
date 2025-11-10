@@ -1,7 +1,6 @@
 from Pages.base_page import BasePage
 from appium.webdriver.common.appiumby import AppiumBy
 
-
 class HomePage(BasePage):
     def __init__(self, driver):
         super().__init__(driver)
@@ -13,6 +12,8 @@ class HomePage(BasePage):
         
         self.BANNER_AD_XPATH = '//android.app.Dialog'
         self.CLOSE_BANNER_AD_ID = "wrap-close-button-1454703513201"
+        
+        self.HOME_BUTTON = '//android.widget.ImageView[@content-desc="Home Tab 1 of 5"]'
     
     # Getters
     def get_page_title(self):

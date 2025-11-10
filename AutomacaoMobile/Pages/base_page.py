@@ -46,7 +46,7 @@ class BasePage:
         "width": self.screen_width,
         "height": self.screen_height * 0.5,
         "direction": f"{direction}",
-        "percent": 0.7
+        "percent": 0.5
     })
         
     def remove_focus(self):

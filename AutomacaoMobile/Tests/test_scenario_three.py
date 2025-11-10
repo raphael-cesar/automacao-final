@@ -1,5 +1,7 @@
+import time
 from Pages.home_page import HomePage
 from Tests_API.get import get_wishlist
+from logger import log
 
 def test_scenario_three(driver):
     data = get_wishlist()
@@ -8,12 +10,17 @@ def test_scenario_three(driver):
     # Use the 3 products from wishlist projeto_final as an argument for loop execution
     for index in range(3):
         product_name = data[index]["Product"]  
+        log.info(f"Product name: {product_name}")
+        
         actual_price = data[index]["Price"]
         formated_price =  float(actual_price.replace(".", "").replace(",", ".").strip())
+        log.info(f"Product price: {actual_price}")
+        
         invalid_zipcode = "00000000"
         valid_zipcode = data[index]["Zipcode"]
         delivery_estimate = data[index]["delivery_estimate"]
         delivery_fee = data[index]["shipping_fee"]
+        delivery = f"Receba em até {delivery_estimate}: {delivery_fee}"
         
         # 1. Open App: Launch the Americanas application.
         if home_page.check_popup():
@@ -33,13 +40,15 @@ def test_scenario_three(driver):
         product_page.scroll("down")
         # Enter an invalid ZIP code, click "Calculate", and verify that an error message is displayed.
         product_page.search_zipcode(invalid_zipcode)
-        assert product_page.validate_zipcode_error_alert_is_shown_and_expected(), "Alert didn't show"
         
+        assert product_page.validate_zipcode_error_alert_is_shown_and_expected(), "Alert didn't show"
+        time.sleep(5)
         # Enter the valid ZIP code returned by the API and validate the delivery time and shipping cost.
         product_page.search_zipcode(valid_zipcode)
         
-        assert product_page.validate_delivery_time_is_shown_and_expected(delivery_estimate), f"DELIVERY ESTIMATE API: {delivery_estimate}"
-        assert product_page.validate_delivery_fee_is_shown_and_expected(delivery_fee)
+        log.info(delivery)
+        assert product_page.validate_delivery_time_is_shown_and_expected(delivery, delivery_estimate), f"DELIVERY ESTIMATE API: {delivery_estimate}"
+        assert product_page.validate_delivery_fee_is_shown_and_expected(delivery, delivery_fee)
         
         # 5. Add to Cart: Tap the "Buy" button.
         product_page.buy_button()
@@ -59,6 +68,8 @@ def test_scenario_three(driver):
         # Increase the quantity to 2 again.
         product_page.add_one()
         assert product_page.get_quantity() == 2
+        product_page.remove_one()
+        assert product_page.get_quantity() == 1
         product_quantity = product_page.get_quantity()
         
         # 7. Add and go to cart: Proceed to the cart finalization screen.
@@ -74,6 +85,7 @@ def test_scenario_three(driver):
         new_value = formated_price * product_quantity
         new_value_formatted = str(f"{new_value:,.2f}".replace(",", "X").replace(".", ",").replace("X", "."))
         
+        log.info(f"NEW_VALUE:{new_value}")
         assert cart_page.validate_product_value_is_total_for_two_units(new_value_formatted, new_value)
         
         cart_page.scroll("down")
@@ -82,15 +94,26 @@ def test_scenario_three(driver):
         # Repeat the invalid and valid ZIP code test to ensure shipping calculation consistency.
         cart_page.search_zipcode(invalid_zipcode)
         assert cart_page.validate_zipcode_error_alert_is_shown_and_expected(), "Alert didn't show"
+        
         cart_page.search_zipcode(valid_zipcode)
-        assert cart_page.validate_delivery_time_is_shown_and_expected(delivery_estimate), f"DELIVERY ESTIMATE API: {delivery_estimate}"
-        assert cart_page.validate_delivery_fee_is_shown_and_expected(delivery_fee)
+        
+        assert cart_page.validate_delivery_time_is_shown_and_expected(delivery, delivery_estimate), f"DELIVERY ESTIMATE API: {delivery_estimate}"
+        
+        assert cart_page.validate_delivery_fee_is_shown_and_expected(delivery, delivery_fee)
         
         # Confirm that the value on the "Proceed to Checkout" button also reflects the total for two units.
         assert cart_page.validate_proceed_button_price_is_total_for_two_units(new_value)
     
         # 9. Proceed to Checkout: Tap "Proceed to Checkout".
+        time.sleep(1)
         cart_page.click_proceed_button()
         
         # 10. Validate Redirect: Check if the login/checkout screen is displayed with the message "Enter your email to continue".
         assert cart_page.validate_email_title_is_shown_and_expected(), f"Get Email Title:{cart_page.get_email_title()}"
+        
+        cart_page.back_to_cart()
+        cart_page.clear_cart()
+        cart_page.click_remove_continue()
+        time.sleep(3)
+        product_page = cart_page.chose_product_button()
+        home_page = product_page.back_menu()

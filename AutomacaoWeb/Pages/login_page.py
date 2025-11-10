@@ -1,6 +1,6 @@
 from Pages.base_page import BasePage
 from selenium.webdriver.common.by import By
-
+from logger import log
 
 # from Pages.email_page import EmailPage
 class LoginPage(BasePage):
@@ -43,6 +43,7 @@ class LoginPage(BasePage):
     def button_login_password(self):
         from Pages.menu_page import MenuPage
         self.click_element(By.CSS_SELECTOR, self.LOGIN_BUTTON_CSS)
+        log.info("Clicou no botão entrar")
         return MenuPage(self.driver)
         
     def click_send_code(self):
