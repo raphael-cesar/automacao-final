@@ -58,3 +58,5 @@
 
 [START] Test 'AutomacaoWeb/Tests/test_scenario_one.py::test_scenario_one' - 23:04:10
 [END] Test 'AutomacaoWeb/Tests/test_scenario_one.py::test_scenario_one' finished in 60.18 seconds.
+
+[START] Test 'AutomacaoWeb/Tests/test_scenario_five.py::test_scenario_five' - 08:37:18

@@ -256,3 +256,201 @@
 [START] Test 'AutomacaoMobile/Tests/test_teste.py::test_testes' - 23:59:30
 [RESULT] Test 'AutomacaoMobile/Tests/test_teste.py::test_testes' -> FAILED
 [END] Test 'AutomacaoMobile/Tests/test_teste.py::test_testes' finished in 21.73 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' - 09:08:47
+[RESULT] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' -> FAILED
+[END] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' finished in 72.44 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' - 09:10:17
+[RESULT] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' -> FAILED
+[END] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' finished in 75.44 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' - 09:12:08
+[RESULT] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' -> FAILED
+[END] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' finished in 175.47 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' - 09:15:41
+[RESULT] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' -> FAILED
+[END] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' finished in 251.01 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' - 09:20:38
+[RESULT] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' -> PASSED
+[END] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' finished in 259.72 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_five.py::test_scenario_five' - 08:10:54
+[END] Test 'AutomacaoMobile/Tests/test_scenario_five.py::test_scenario_five' finished in 0.27 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_seven.py::test_scenario_seven' - 08:10:54
+[END] Test 'AutomacaoMobile/Tests/test_scenario_seven.py::test_scenario_seven' finished in 0.06 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_six.py::test_scenario_six' - 08:10:54
+[END] Test 'AutomacaoMobile/Tests/test_scenario_six.py::test_scenario_six' finished in 0.07 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' - 08:10:54
+[END] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' finished in 0.06 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_five.py::test_scenario_five' - 08:14:46
+[END] Test 'AutomacaoMobile/Tests/test_scenario_five.py::test_scenario_five' finished in 0.38 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_seven.py::test_scenario_seven' - 08:14:46
+[END] Test 'AutomacaoMobile/Tests/test_scenario_seven.py::test_scenario_seven' finished in 0.09 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_six.py::test_scenario_six' - 08:14:46
+[END] Test 'AutomacaoMobile/Tests/test_scenario_six.py::test_scenario_six' finished in 0.07 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' - 08:14:46
+[END] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' finished in 0.07 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_five.py::test_scenario_five' - 08:24:02
+[END] Test 'AutomacaoMobile/Tests/test_scenario_five.py::test_scenario_five' finished in 0.24 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_seven.py::test_scenario_seven' - 08:24:02
+[END] Test 'AutomacaoMobile/Tests/test_scenario_seven.py::test_scenario_seven' finished in 0.06 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_six.py::test_scenario_six' - 08:24:02
+[END] Test 'AutomacaoMobile/Tests/test_scenario_six.py::test_scenario_six' finished in 0.06 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' - 08:24:02
+[END] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' finished in 0.06 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_five.py::test_scenario_five' - 08:28:36
+[END] Test 'AutomacaoMobile/Tests/test_scenario_five.py::test_scenario_five' finished in 0.17 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_seven.py::test_scenario_seven' - 08:28:36
+[END] Test 'AutomacaoMobile/Tests/test_scenario_seven.py::test_scenario_seven' finished in 0.07 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_six.py::test_scenario_six' - 08:28:36
+[END] Test 'AutomacaoMobile/Tests/test_scenario_six.py::test_scenario_six' finished in 0.05 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' - 08:28:36
+[END] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' finished in 0.09 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_five.py::test_scenario_five' - 08:29:04
+[END] Test 'AutomacaoMobile/Tests/test_scenario_five.py::test_scenario_five' finished in 0.22 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_seven.py::test_scenario_seven' - 08:29:05
+[END] Test 'AutomacaoMobile/Tests/test_scenario_seven.py::test_scenario_seven' finished in 0.07 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_six.py::test_scenario_six' - 08:29:05
+[END] Test 'AutomacaoMobile/Tests/test_scenario_six.py::test_scenario_six' finished in 0.06 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' - 08:29:05
+[END] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' finished in 0.06 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_five.py::test_scenario_five' - 08:30:46
+[END] Test 'AutomacaoMobile/Tests/test_scenario_five.py::test_scenario_five' finished in 0.13 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_seven.py::test_scenario_seven' - 08:30:46
+[END] Test 'AutomacaoMobile/Tests/test_scenario_seven.py::test_scenario_seven' finished in 0.05 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_six.py::test_scenario_six' - 08:30:46
+[END] Test 'AutomacaoMobile/Tests/test_scenario_six.py::test_scenario_six' finished in 0.05 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' - 08:30:46
+[END] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' finished in 0.06 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_five.py::test_scenario_five' - 08:31:36
+[END] Test 'AutomacaoMobile/Tests/test_scenario_five.py::test_scenario_five' finished in 0.13 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_seven.py::test_scenario_seven' - 08:31:36
+[END] Test 'AutomacaoMobile/Tests/test_scenario_seven.py::test_scenario_seven' finished in 0.06 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_six.py::test_scenario_six' - 08:31:36
+[END] Test 'AutomacaoMobile/Tests/test_scenario_six.py::test_scenario_six' finished in 0.06 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' - 08:31:36
+[END] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' finished in 0.06 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_five.py::test_scenario_five' - 08:32:18
+[END] Test 'AutomacaoMobile/Tests/test_scenario_five.py::test_scenario_five' finished in 0.15 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_seven.py::test_scenario_seven' - 08:32:18
+[END] Test 'AutomacaoMobile/Tests/test_scenario_seven.py::test_scenario_seven' finished in 0.06 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_six.py::test_scenario_six' - 08:32:18
+[END] Test 'AutomacaoMobile/Tests/test_scenario_six.py::test_scenario_six' finished in 0.06 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' - 08:32:18
+[END] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' finished in 0.06 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_five.py::test_scenario_five' - 08:32:37
+[END] Test 'AutomacaoMobile/Tests/test_scenario_five.py::test_scenario_five' finished in 0.23 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_seven.py::test_scenario_seven' - 08:32:37
+[END] Test 'AutomacaoMobile/Tests/test_scenario_seven.py::test_scenario_seven' finished in 0.07 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_six.py::test_scenario_six' - 08:32:37
+[END] Test 'AutomacaoMobile/Tests/test_scenario_six.py::test_scenario_six' finished in 0.06 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' - 08:32:37
+[END] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' finished in 0.06 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_five.py::test_scenario_five' - 08:36:51
+[END] Test 'AutomacaoMobile/Tests/test_scenario_five.py::test_scenario_five' finished in 0.14 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_seven.py::test_scenario_seven' - 08:36:51
+[END] Test 'AutomacaoMobile/Tests/test_scenario_seven.py::test_scenario_seven' finished in 0.06 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_six.py::test_scenario_six' - 08:36:51
+[END] Test 'AutomacaoMobile/Tests/test_scenario_six.py::test_scenario_six' finished in 0.06 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' - 08:36:51
+[END] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' finished in 0.06 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_five.py::test_scenario_five' - 08:37:33
+[END] Test 'AutomacaoMobile/Tests/test_scenario_five.py::test_scenario_five' finished in 0.14 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_seven.py::test_scenario_seven' - 08:37:33
+[END] Test 'AutomacaoMobile/Tests/test_scenario_seven.py::test_scenario_seven' finished in 0.06 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_six.py::test_scenario_six' - 08:37:33
+[END] Test 'AutomacaoMobile/Tests/test_scenario_six.py::test_scenario_six' finished in 0.06 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' - 08:37:33
+[END] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' finished in 0.06 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_five.py::test_scenario_five' - 08:45:03
+[END] Test 'AutomacaoMobile/Tests/test_scenario_five.py::test_scenario_five' finished in 0.27 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_seven.py::test_scenario_seven' - 08:45:04
+[END] Test 'AutomacaoMobile/Tests/test_scenario_seven.py::test_scenario_seven' finished in 0.20 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_six.py::test_scenario_six' - 08:45:04
+[END] Test 'AutomacaoMobile/Tests/test_scenario_six.py::test_scenario_six' finished in 0.17 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' - 08:45:04
+[END] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' finished in 0.19 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_five.py::test_scenario_five' - 08:45:26
+[END] Test 'AutomacaoMobile/Tests/test_scenario_five.py::test_scenario_five' finished in 0.23 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_seven.py::test_scenario_seven' - 08:45:26
+[END] Test 'AutomacaoMobile/Tests/test_scenario_seven.py::test_scenario_seven' finished in 0.06 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_six.py::test_scenario_six' - 08:45:26
+[END] Test 'AutomacaoMobile/Tests/test_scenario_six.py::test_scenario_six' finished in 0.06 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' - 08:45:26
+[END] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' finished in 0.06 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_five.py::test_scenario_five' - 08:45:32
+[END] Test 'AutomacaoMobile/Tests/test_scenario_five.py::test_scenario_five' finished in 0.13 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_seven.py::test_scenario_seven' - 08:45:33
+[END] Test 'AutomacaoMobile/Tests/test_scenario_seven.py::test_scenario_seven' finished in 0.06 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_six.py::test_scenario_six' - 08:45:33
+[END] Test 'AutomacaoMobile/Tests/test_scenario_six.py::test_scenario_six' finished in 0.06 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' - 08:45:33
+[END] Test 'AutomacaoMobile/Tests/test_scenario_three.py::test_scenario_three' finished in 0.06 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_five.py::test_scenario_five' - 08:48:56
+[RESULT] Test 'AutomacaoMobile/Tests/test_scenario_five.py::test_scenario_five' -> FAILED
+[END] Test 'AutomacaoMobile/Tests/test_scenario_five.py::test_scenario_five' finished in 46.63 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_seven.py::test_scenario_seven' - 08:49:43
+[RESULT] Test 'AutomacaoMobile/Tests/test_scenario_seven.py::test_scenario_seven' -> PASSED
+[END] Test 'AutomacaoMobile/Tests/test_scenario_seven.py::test_scenario_seven' finished in 33.80 seconds.
+
+[START] Test 'AutomacaoMobile/Tests/test_scenario_six.py::test_scenario_six' - 08:50:16
