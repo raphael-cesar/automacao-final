@@ -21,6 +21,8 @@ def driver():
         "appium:appWaitActivity": "com.b2w.americanas.MainActivity",
         "appium:autoGrantPermissions": True, 
         "appium: appWaitDuration": 5000,
+        "unicodeKeyboard": True,
+        "resetKeyboard": True
     }) # Capabilities defined here
     _driver = webdriver.Remote("http://127.0.0.1:4723", options=options)
     
