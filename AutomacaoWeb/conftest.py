@@ -3,7 +3,6 @@ from selenium import webdriver
 import json
 from pathlib import Path
 import time
-import os
 import pytest_html
 
 @pytest.fixture
