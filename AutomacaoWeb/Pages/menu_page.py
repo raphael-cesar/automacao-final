@@ -58,7 +58,7 @@ class MenuPage(BasePage):
         self.click_element(By.XPATH, self.EMAIL_HEADER_XPATH)
         return ProfilePage(self.driver)
     
-    def click_login(self):
+    def click_login_page(self):
         from Pages.login_page import LoginPage
         log.info("Go to login")
         self.click_element(By.XPATH, self.EMAIL_HEADER_XPATH)

@@ -13,3 +13,5 @@ htmlcov/
 *.png
 *.coverage
 *.DS_Store
+
+*.log

@@ -8,11 +8,11 @@ def test_scenario_six(driver, load_data):
     # 1. Access the website: Open the browser and go to the Americanas website.
     menu_page.navigate()
     
-    if menu_page.check_popup():
-        menu_page.click_quit_popup()
+    # if menu_page.check_popup():
+    #     menu_page.click_quit_popup()
         
     # 2. Navigate to Login: Click on the "Login or Sign Up" option.
-    login_page = menu_page.click_login()
+    login_page = menu_page.click_login_page()
     
     # 3. Enter Correct Credentials: Fill in the fields with a valid and already registered email and password.
     login_page.click_login_email_password()

@@ -6,13 +6,12 @@ class ProfilePage(BasePage):
     def __init__(self, driver):
         super().__init__(driver)
         #Locators
-        self.AUTH_XPATH = "/html/body/div[2]/div/div[1]/div/div[2]/div/div/div/div/aside/nav/div[1]/div[5]/a"
+        self.AUTH_XPATH = '//*[@href="#/authentication"]'
         self.SET_PASSWORD_CLASS = "vtex-button__label"
         self.CODE_INPUT_CLASS = "vtex-styleguide-9-x-input"
-        self.PASSWORD_INPUT_XPATH = "/html/body/div[2]/div/div[1]/div/div[2]/div/div/div/div/div/div[3]/section/main/div/div/section/div/div[4]/label/div/input"
+        self.PASSWORD_INPUT_XPATH = "/html/body/div[2]/div/div[1]/div/div[3]/div/div/div/div/div/div[3]/section/main/div/div/section/div/div[4]/label/div/input"
         
-        self.SAVE_PASSWORD_BUTTON_XPATH = "/html/body/div[2]/div/div[1]/div/div[2]/div/div/div/div/div/div[3]/section/main/div/div/section/footer/div/button"
-        
+        self.SAVE_PASSWORD_BUTTON_XPATH = "/html/body/div[2]/div/div[1x`]/div/div[3]/div/div/div/div/div/div[3]/section/main/div/div/section/footer/div/button"
         self.PASSWORD_MASK_CLASS = "vtex-my-authentication-1-x-maskedPassword_content"
         self.PASSWORD_MASK_COMMA_CLASS = ".vtex-my-authentication-1-x-maskedPassword_content"
                 
