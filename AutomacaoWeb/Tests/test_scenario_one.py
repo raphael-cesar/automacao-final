@@ -11,11 +11,11 @@ def test_scenario_one(driver, load_data):
     # 1. Access the website: Open the browser and go to the Americanas website.
     menu_page.navigate()
     
-    if menu_page.check_popup():
-        menu_page.click_quit_popup()
+    # if menu_page.check_popup():
+    #     menu_page.click_quit_popup()
     
     # 2. Navigate to Registration: Click on the "Login or Sign Up" option.
-    menu_page.click_login()
+    menu_page.click_login_page()
     
     # 3. Generate Temporary Email: In a new tab, go to https://temp-mail.io/ and copy the generated email.
     email_page = menu_page.navigate_email()

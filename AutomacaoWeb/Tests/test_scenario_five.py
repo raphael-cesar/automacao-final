@@ -11,8 +11,8 @@ def test_scenario_five(driver):
         # 1. Access Website/App: Open the Americanas website or app.
         menu_page.navigate()
     
-        if menu_page.check_popup():
-            menu_page.click_quit_popup()
+        # if menu_page.check_popup():
+        #     menu_page.click_quit_popup()
             
         # 2. Search for Product: Search for a product that exists in your API Wishlist.
         menu_page.search_product(product_name)

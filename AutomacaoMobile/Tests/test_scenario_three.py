@@ -23,8 +23,8 @@ def test_scenario_three(driver):
         delivery = f"Receba em até {delivery_estimate}: {delivery_fee}"
         
         # 1. Open App: Launch the Americanas application.
-        if home_page.check_popup():
-            home_page.close_popup()
+        # if home_page.check_popup():
+        #     home_page.close_popup()
             
         # 2. Search for Product: Use the search bar to look for a product from the wishlist.
         search_page = home_page.search_product(product_name)

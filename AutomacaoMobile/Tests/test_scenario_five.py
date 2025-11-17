@@ -13,8 +13,8 @@ def test_scenario_five(driver):
         formated_price =  float(actual_price.replace(".", "").replace(",", ".").strip())
         
         # 1. Access Website/App: Open the Americanas website or app.
-        if home_page.check_popup():
-            home_page.close_popup()
+        # if home_page.check_popup():
+        #     home_page.close_popup()
             
         # 2. Search for Product: Search for a product that exists in your API Wishlist.
         search_page = home_page.search_product(product_name)
