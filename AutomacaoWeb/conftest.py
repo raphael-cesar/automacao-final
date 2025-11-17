@@ -42,18 +42,6 @@ def pytest_runtest_teardown(item):
     # salva em arquivo
     with LOG_FILE.open("a", encoding="utf-8") as f:
         f.write(msg + "\n")
- 
-@pytest.hookimpl(trylast=True, hookwrapper=True)
-def pytest_runtest_makereport(item, call):
-    # hookwrapper=True ensures pytest gives us the real test report
-    outcome = yield
-    rep = outcome.get_result()
-
-    if rep.when == "call":  # only after the test function runs
-        result = "PASSED" if rep.failed is False else "FAILED"
-        msg = f"[RESULT] Test '{item.nodeid}' -> {result}"
-        with LOG_FILE.open("a", encoding="utf-8") as f:
-            f.write(msg + "\n")
             
 @pytest.hookimpl(hookwrapper=True)
 def pytest_runtest_makereport(item, call):
