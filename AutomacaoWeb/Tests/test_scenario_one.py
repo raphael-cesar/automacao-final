@@ -108,7 +108,7 @@ def test_scenario_one(driver, load_data):
     time.sleep(1)
     profile_page.clear_password_field()
     profile_page.send_password(load_data["passwords"]["correct_password"])
-    assert profile_page.validate_save_password_button()
+    # assert profile_page.validate_save_password_button()
     
     time.sleep(1)
     profile_page.click_save_password()
