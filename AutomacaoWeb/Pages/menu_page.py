@@ -11,7 +11,7 @@ class MenuPage(BasePage):
         self.QUIT_BANNER_ID = "close-button-1454703513200"
         self.MENU_BANNER_ID = "close-button-1454703513200"
         self.LOGIN_BUTTON_CLASS = "ButtonLogin_Container__sgzuk"
-        self.EMAIL_HEADER_XPATH = "/html/body/div[1]/header/div/section[1]/div/a[2]/div[2]"
+        self.EMAIL_HEADER_XPATH = '//*[@id="__next"]/header/div/section[1]/div/a[2]'
         self.SEARCH_BAR_ID = "search-input"
         self.MAG_BUTTON_XPATH = "/html/body/div[1]/header/div/section[1]/div/div[1]/div/form/button"
      
