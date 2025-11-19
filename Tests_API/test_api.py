@@ -219,7 +219,7 @@ def test_scenario_eighteen(): # Objective: Verify that an authenticated user can
     # Prerequisites: User must be authenticated and have one or more wishlists.
     HEADER = get_header()
     wishlist_one = {
-        "name": "Wishlist one"
+        "name": "Wishlist ONE"
     }
     wishlist_two = {
         "name": "Wishlist two"
